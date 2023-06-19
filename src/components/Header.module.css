@@ -1,0 +1,20 @@
+.headers_container {
+  margin-top: 40px;
+}
+.header_text {
+  color: #e4f1f6;
+  padding: 10px 15px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: left;
+  font-size: 1.3rem;
+}
+.subheader_text {
+    margin: 0 auto;
+    padding: 15px;
+    color: #67AFCB;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    line-height: 25px;
+    text-align: left;
+}
