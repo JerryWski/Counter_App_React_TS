@@ -1,0 +1,17 @@
+.bg_wrapper {
+  background-color: #092834;
+  min-width: 300px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  font-weight: 300;
+  text-align: center;
+}
+.count_header {
+    color: #E4F1F6;
+    font-size: 1.3rem;
+    padding: 5px;
+    margin: 20px 0;
+}

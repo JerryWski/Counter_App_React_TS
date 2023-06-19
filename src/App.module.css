@@ -2,7 +2,14 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #347B98;
     font-family: "Inconsolata", monospace;
 }
+
+
+/* #E4F1F6
+#67AFCB
+#347B98
+#1A3E4C
+#092834 */
