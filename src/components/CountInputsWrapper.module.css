@@ -1,0 +1,77 @@
+.inputs_wrapper {
+  height: 100%;
+  margin-top: 10px;
+  background-color: #1a3e4c;
+  border-radius: 7px;
+  padding: 22px;
+  color: #e4f1f6;
+}
+.input_container {
+  position: relative;
+  width: 70%;
+  margin: 45px auto 30px auto;
+}
+.input_container input {
+  position: relative;
+  width: 100%;
+  padding: 15px 10px 10px;
+  background: transparent;
+  outline: none;
+  box-shadow: none;
+  border: none;
+  color: #092834;
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  z-index: 10;
+}
+.input_container span {
+  position: absolute;
+  right: 0;
+  font-size: 1.1em;
+  color: #8f8f8f;
+  letter-spacing: 00.05em;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.input_container input:valid ~ span,
+.input_container input:focus ~ span {
+  color: #e4f1f6;
+  transform: translateX(0px) translateY(-34px);
+}
+.input_container i {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  font-weight: bold;
+  background: #e4f1f6;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+.input_container input:valid ~ i,
+.input_container input:focus ~ i {
+  height: 44px;
+}
+
+.input_container input::-webkit-outer-spin-button,
+.input_container input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_container input[type='number'] {
+  -moz-appearance: textfield;
+}
+.duration_explain {
+  margin-top: 15px;
+  text-align: left;
+  color: #67afcb;
+  font-size: 0.6rem;
+}
+.error_text,
+.error_text__amount {
+  color: #e94141;
+}
