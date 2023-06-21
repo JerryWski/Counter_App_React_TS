@@ -1,14 +1,14 @@
 .inputs_wrapper {
-  height: 100%;
   margin-top: 10px;
   background-color: #1a3e4c;
   border-radius: 7px;
   padding: 22px;
   color: #e4f1f6;
+  box-shadow: 11px 2px 21px -7px rgba(13,35,43,1);
 }
 .input_container {
   position: relative;
-  width: 70%;
+  width: 100%;
   margin: 45px auto 30px auto;
 }
 .input_container input {

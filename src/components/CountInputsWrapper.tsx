@@ -1,3 +1,4 @@
+/* eslint-disable react/self-closing-comp */
 import styles from './CountInputsWrapper.module.css';
 
 const CountInputsWrapper = () => {

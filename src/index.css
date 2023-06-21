@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-color: #347B98;
+}
 html {
     font-size: 100%;
 }
