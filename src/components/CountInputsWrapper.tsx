@@ -1,19 +1,29 @@
 /* eslint-disable react/self-closing-comp */
-import { useState } from 'react';
 import styles from './CountInputsWrapper.module.css';
+import InputsPropTypes from '../types/PropTypes';
+import { CalculatorProps } from '../types/Types';
 
-const CountInputsWrapper = ({ principal, rate, month, onPrincipalChange, onRateChange, onMonthChange }) => {
-
+const CountInputsWrapper: React.FC<CalculatorProps> = ({
+  principal,
+  rate,
+  month,
+  onPrincipalChange,
+  onRateChange,
+  onMonthChange,
+}) => {
   const handlePrincipalChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onPrincipalChange(e.target.value);
+    const principalValue = parseFloat(e.target.value);
+    onPrincipalChange(principalValue);
   };
 
   const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onRateChange(e.target.value);
+    const rateValue = parseFloat(e.target.value);
+    onRateChange(rateValue);
   };
 
   const handleMonthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    onMonthChange(e.target.value);
+    const monthValue = parseFloat(e.target.value);
+    onMonthChange(monthValue);
   };
 
   return (
@@ -56,5 +66,7 @@ const CountInputsWrapper = ({ principal, rate, month, onPrincipalChange, onRateC
     </div>
   );
 };
+
+CountInputsWrapper.propTypes = InputsPropTypes;
 
 export default CountInputsWrapper;

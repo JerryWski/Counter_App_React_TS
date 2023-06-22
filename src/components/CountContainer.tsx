@@ -5,9 +5,9 @@ import CountInputsWrapper from './CountInputsWrapper';
 import CountInvest from './CountInvest';
 
 const CountContainer = () => {
-  const [principal, setPrincipal] = useState('');
-  const [rate, setRate] = useState('');
-  const [month, setMonth] = useState('');
+  const [principal, setPrincipal] = useState<number>(0);
+  const [rate, setRate] = useState<number>(0);
+  const [month, setMonth] = useState<number>(0);
 
   return (
     <div className={styles.bg_wrapper}>
