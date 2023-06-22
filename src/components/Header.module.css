@@ -1,5 +1,6 @@
 .headers_container {
   margin-top: 40px;
+  max-width: 1200px;
 }
 .header_text {
   color: #e4f1f6;
@@ -7,7 +8,7 @@
   margin: 0 auto;
   width: 100%;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 .subheader_text {
     margin: 0 auto;

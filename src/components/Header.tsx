@@ -5,7 +5,7 @@ const Header = () => {
     <div className={styles.headers_container}>
       <h1 className={styles.header_text}>
         Do you know what is the difference between an income for a bank deposit
-        and an investment fund with the same parameters?
+        and an investment fund?
       </h1>
       <h2 className={styles.subheader_text}>
         In my past business of finance, I havee noticed that many people can not
