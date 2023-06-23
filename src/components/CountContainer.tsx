@@ -8,6 +8,7 @@ const CountContainer = () => {
   const [principal, setPrincipal] = useState<number>(0);
   const [rate, setRate] = useState<number>(0);
   const [month, setMonth] = useState<number>(0);
+  const [errorText, setErrorText] = useState<string>('');
 
   return (
     <div className={styles.bg_wrapper}>
@@ -20,10 +21,16 @@ const CountContainer = () => {
           onPrincipalChange={setPrincipal}
           onRateChange={setRate}
           onMonthChange={setMonth}
+          errorText={errorText}
         />
       </div>
       <div className={styles.section_two}>
-        <CountDeposit principal={principal} rate={rate} month={month} />
+        <CountDeposit
+          principal={principal}
+          rate={rate}
+          month={month}
+          setErrorText={setErrorText}
+        />
         <CountInvest principal={principal} rate={rate} month={month} />
       </div>
     </div>

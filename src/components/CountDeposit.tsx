@@ -3,13 +3,23 @@ import styles from './CountDeposit.module.css';
 import DepositInvestProps from '../types/DepositInvestProps';
 import { CalcProps } from '../types/Types';
 
-const CountDeposit: React.FC<CalcProps> = ({ principal, rate, month }) => {
+interface CountDepositProps extends CalcProps {
+  setErrorText: (errorText: string) => void;
+}
+
+const CountDeposit: React.FC<CountDepositProps> = ({
+  principal,
+  rate,
+  month,
+  setErrorText,
+}) => {
   const [interest, setInterest] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
 
   const calculateDeposit = () => {
     if (principal <= 0 || rate <= 0) {
-      console.log('daj liczbe wieksza niz zero');
+      setErrorText('Please enter a number greater than 0');
+      return;
     }
 
     const calculatedInterest = principal * (rate / 100) * 0.81 * (month / 12);
@@ -18,6 +28,11 @@ const CountDeposit: React.FC<CalcProps> = ({ principal, rate, month }) => {
 
     setInterest(calculatedInterest.toFixed(2));
     setTotalAmount(calculatedTotalAmount.toFixed(2));
+    setErrorText('');
+    const errorElement = document.querySelector('.error_text__amount');
+    if (errorElement) {
+      errorElement.textContent = '';
+    }
   };
 
   return (

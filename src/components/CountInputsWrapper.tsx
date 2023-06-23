@@ -3,13 +3,18 @@ import styles from './CountInputsWrapper.module.css';
 import InputsPropTypes from '../types/PropTypes';
 import { InputCalcProps } from '../types/Types';
 
-const CountInputsWrapper: React.FC<InputCalcProps> = ({
+interface CountInputsWrapperProps extends InputCalcProps {
+  errorText: string;
+}
+
+const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
   principal,
   rate,
   month,
   onPrincipalChange,
   onRateChange,
   onMonthChange,
+  errorText,
 }) => {
   const handlePrincipalChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const principalValue = parseFloat(e.target.value);
@@ -28,7 +33,9 @@ const CountInputsWrapper: React.FC<InputCalcProps> = ({
 
   return (
     <div className={styles.inputs_wrapper}>
-      <span className={styles.error_text__amount}>Error text amount</span>
+      {errorText && (
+        <span className={styles.error_text__amount}>{errorText}</span>
+      )}
       <div className={styles.input_container}>
         <input
           required
