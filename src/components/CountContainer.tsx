@@ -24,7 +24,7 @@ const CountContainer = () => {
       </div>
       <div className={styles.section_two}>
         <CountDeposit principal={principal} rate={rate} month={month} />
-        <CountInvest />
+        <CountInvest principal={principal} rate={rate} month={month} />
       </div>
     </div>
   );

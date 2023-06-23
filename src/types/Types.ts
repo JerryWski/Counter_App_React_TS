@@ -7,7 +7,7 @@ export type InputCalcProps = {
   onMonthChange: (value: number) => void;
 };
 
-export type DepositCalcProps = {
+export type CalcProps = {
   principal: number;
   rate: number;
   month: number;

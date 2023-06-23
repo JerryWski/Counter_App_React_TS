@@ -1,13 +1,9 @@
 import { useState } from 'react';
 import styles from './CountDeposit.module.css';
-import DepositProps from '../types/DepositProps';
-import { DepositCalcProps } from '../types/Types';
+import DepositInvestProps from '../types/DepositInvestProps';
+import { CalcProps } from '../types/Types';
 
-const CountDeposit: React.FC<DepositCalcProps> = ({
-  principal,
-  rate,
-  month,
-}) => {
+const CountDeposit: React.FC<CalcProps> = ({ principal, rate, month }) => {
   const [interest, setInterest] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
 
@@ -50,5 +46,5 @@ const CountDeposit: React.FC<DepositCalcProps> = ({
     </div>
   );
 };
-CountDeposit.propTypes = DepositProps;
+CountDeposit.propTypes = DepositInvestProps;
 export default CountDeposit;

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 
-const DepositProps = {
+const DepositInvestProps = {
   principal: PropTypes.number.isRequired,
   rate: PropTypes.number.isRequired,
   month: PropTypes.number.isRequired,
 };
 
-export default DepositProps;
+export default DepositInvestProps;
