@@ -1,9 +1,9 @@
 /* eslint-disable react/self-closing-comp */
 import styles from './CountInputsWrapper.module.css';
 import InputsPropTypes from '../types/PropTypes';
-import { CalculatorProps } from '../types/Types';
+import { InputCalcProps } from '../types/Types';
 
-const CountInputsWrapper: React.FC<CalculatorProps> = ({
+const CountInputsWrapper: React.FC<InputCalcProps> = ({
   principal,
   rate,
   month,

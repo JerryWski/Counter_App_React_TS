@@ -1,4 +1,4 @@
-export type CalculatorProps = {
+export type InputCalcProps = {
   principal: number;
   rate: number;
   month: number;
