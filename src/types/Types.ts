@@ -7,4 +7,8 @@ export type CalculatorProps = {
   onMonthChange: (value: number) => void;
 };
 
-export default CalculatorProps;
+export type DepositCalcProps = {
+  principal: number;
+  rate: number;
+  month: number;
+};

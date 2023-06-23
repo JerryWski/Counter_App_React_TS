@@ -23,7 +23,7 @@ const CountContainer = () => {
         />
       </div>
       <div className={styles.section_two}>
-        <CountDeposit />
+        <CountDeposit principal={principal} rate={rate} month={month} />
         <CountInvest />
       </div>
     </div>
