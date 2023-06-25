@@ -31,7 +31,15 @@ const CountContainer = () => {
           month={month}
           setErrorText={setErrorText}
         />
-        <CountInvest principal={principal} rate={rate} month={month} />
+        <CountInvest
+          principal={principal}
+          rate={rate}
+          month={month}
+          setErrorText={setErrorText}
+        />
+        <p className={styles.footer}>
+          * Income resulting from interest includes capital gains tax - 19%
+        </p>
       </div>
     </div>
   );

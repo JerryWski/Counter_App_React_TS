@@ -3,13 +3,22 @@ import styles from './CountInvest.module.css';
 import { CalcProps } from '../types/Types';
 import DepositInvestProps from '../types/DepositInvestProps';
 
-const CountInvest: React.FC<CalcProps> = ({ principal, rate }) => {
+interface CountInvestProps extends CalcProps {
+  setErrorText: (errorText: string) => void;
+}
+
+const CountInvest: React.FC<CountInvestProps> = ({
+  principal,
+  rate,
+  setErrorText,
+}) => {
   const [interest, setInterest] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
 
   const calculateInvest = () => {
     if (principal <= 0 || rate <= 0) {
-      console.log('daj liczbe wieksza niz zero');
+      setErrorText('Please enter a number greater than 0');
+      return;
     }
 
     const calculatedInterest = principal * (rate / 100) * 0.81;
@@ -18,6 +27,11 @@ const CountInvest: React.FC<CalcProps> = ({ principal, rate }) => {
 
     setInterest(calculatedInterest.toFixed(2));
     setTotalAmount(calculatedTotalAmount.toFixed(2));
+    setErrorText(''); // calling prop func
+    const errorElement = document.querySelector('.error_text__amount');
+    if (errorElement) {
+      errorElement.textContent = '';
+    }
   };
   return (
     <div className={styles.investment_container}>
