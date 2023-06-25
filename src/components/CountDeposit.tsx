@@ -36,11 +36,12 @@ const CountDeposit: React.FC<CountDepositProps> = ({
     setInterest(calculatedInterest.toFixed(2));
     setTotalAmount(calculatedTotalAmount.toFixed(2));
     setErrorText(''); // calling prop func
+    setErrorDuration('');
+
     const errorElement = document.querySelector('.error_text__amount');
     if (errorElement) {
       errorElement.textContent = '';
     }
-    setErrorDuration('');
     const errorDuration = document.querySelector('.error_text');
     if (errorDuration) {
       errorDuration.textContent = '';

@@ -21,16 +21,32 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
   const handlePrincipalChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const principalValue = parseFloat(e.target.value);
     onPrincipalChange(principalValue);
+    // check for fixing console error with input value
+    if (Number.isNaN(principalValue)) {
+      onPrincipalChange(0);
+    } else {
+      onPrincipalChange(principalValue);
+    }
   };
 
   const handleRateChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const rateValue = parseFloat(e.target.value);
     onRateChange(rateValue);
+    if (Number.isNaN(rateValue)) {
+      onRateChange(0);
+    } else {
+      onRateChange(rateValue);
+    }
   };
 
   const handleMonthChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const monthValue = parseFloat(e.target.value);
     onMonthChange(monthValue);
+    if (Number.isNaN(monthValue)) {
+      onMonthChange(0);
+    } else {
+      onMonthChange(monthValue);
+    }
   };
 
   return (
