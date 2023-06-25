@@ -5,6 +5,7 @@ import { CalcProps } from '../types/Types';
 
 interface CountDepositProps extends CalcProps {
   setErrorText: (errorText: string) => void;
+  setErrorDuration: (errorDuration: string) => void;
 }
 // passing setErrorText prop to component with func
 const CountDeposit: React.FC<CountDepositProps> = ({
@@ -12,6 +13,7 @@ const CountDeposit: React.FC<CountDepositProps> = ({
   rate,
   month,
   setErrorText,
+  setErrorDuration,
 }) => {
   const [interest, setInterest] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
@@ -20,6 +22,10 @@ const CountDeposit: React.FC<CountDepositProps> = ({
   const calculateDeposit = () => {
     if (principal <= 0 || rate <= 0) {
       setErrorText('Please enter a number greater than 0');
+      return;
+    }
+    if (month < 1 || month > 12) {
+      setErrorDuration('Please enter a number from 1 to 12');
       return;
     }
 
@@ -33,6 +39,11 @@ const CountDeposit: React.FC<CountDepositProps> = ({
     const errorElement = document.querySelector('.error_text__amount');
     if (errorElement) {
       errorElement.textContent = '';
+    }
+    setErrorDuration('');
+    const errorDuration = document.querySelector('.error_text');
+    if (errorDuration) {
+      errorDuration.textContent = '';
     }
   };
 

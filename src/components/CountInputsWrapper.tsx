@@ -5,6 +5,7 @@ import { InputCalcProps } from '../types/Types';
 
 interface CountInputsWrapperProps extends InputCalcProps {
   errorText: string;
+  errorDuration: string;
 }
 
 const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
@@ -15,6 +16,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
   onRateChange,
   onMonthChange,
   errorText,
+  errorDuration,
 }) => {
   const handlePrincipalChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const principalValue = parseFloat(e.target.value);
@@ -66,7 +68,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
         <span>Duration*</span>
         <i></i>
       </div>
-      <span className={styles.error_text}>error text</span>
+      <span className={styles.error_text}>{errorDuration}</span>
       <p className={styles.duration_explain}>
         * In duration please select numbers from 1 to 12
       </p>

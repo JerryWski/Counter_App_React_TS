@@ -9,6 +9,7 @@ const CountContainer = () => {
   const [rate, setRate] = useState<number>(0);
   const [month, setMonth] = useState<number>(0);
   const [errorText, setErrorText] = useState<string>('');
+  const [errorDuration, setErrorDuration] = useState<string>('');
 
   return (
     <div className={styles.bg_wrapper}>
@@ -22,6 +23,7 @@ const CountContainer = () => {
           onRateChange={setRate}
           onMonthChange={setMonth}
           errorText={errorText}
+          errorDuration={errorDuration}
         />
       </div>
       <div className={styles.section_two}>
@@ -30,12 +32,14 @@ const CountContainer = () => {
           rate={rate}
           month={month}
           setErrorText={setErrorText}
+          setErrorDuration={setErrorDuration}
         />
         <CountInvest
           principal={principal}
           rate={rate}
           month={month}
           setErrorText={setErrorText}
+          setErrorDuration={setErrorDuration}
         />
         <p className={styles.footer}>
           * Income resulting from interest includes capital gains tax - 19%
