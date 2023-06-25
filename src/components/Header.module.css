@@ -19,3 +19,9 @@
     line-height: 25px;
     text-align: left;
 }
+
+@media (min-width: 900px) {
+.header_text {
+  font-size: 2.6rem;
+}
+}
