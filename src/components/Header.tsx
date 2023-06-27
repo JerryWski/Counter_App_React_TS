@@ -3,11 +3,12 @@ import styles from './Header.module.css';
 const Header = () => {
   return (
     <div className={styles.headers_container}>
-      <h1 className={styles.header_text}>
+      <h1 className={styles.header_text}>Let&apos;s Count It App</h1>
+      <h2 className={styles.subheader_text}>
         Do you know what is the difference between an income for a bank deposit
         and an investment fund?
-      </h1>
-      <h2 className={styles.subheader_text}>
+      </h2>
+      <h2 className={styles.text}>
         In my past business of finance, I havee noticed that many people can not
         accurately calculate or compare the return on a term deposit and a
         mutual fund, where we have the same parameters, namely the amount, the
