@@ -13,8 +13,16 @@
   margin: 15px 0px 15px 0px;
 }
 .button_wrapper {
-  margin: 40px 10px;
+  margin: 40px 10px 10px 10px;
 }
+/* .currency_container {
+  margin-bottom: 20px;
+  background: transparent;
+  border: 1px solid #e4f1f6;
+  border-radius: 7px;
+  padding: 4px;
+  color: #67AFCB;
+} */
 .calculate_btn__depo {
   padding: 15px 20px;
   border: 1.5px solid #e4f1f6;
