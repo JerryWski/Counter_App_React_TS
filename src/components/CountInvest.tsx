@@ -2,6 +2,7 @@ import { useState } from 'react';
 import styles from './CountInvest.module.css';
 import { CalcProps } from '../types/Types';
 import DepositInvestProps from '../types/DepositInvestProps';
+import CurrencySelector from './CurrencySelector';
 
 interface CountInvestProps extends CalcProps {
   setErrorText: (errorText: string) => void;
@@ -17,6 +18,7 @@ const CountInvest: React.FC<CountInvestProps> = ({
 }) => {
   const [interest, setInterest] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
+  const [selectedCurrency, setSelectedCurrency] = useState('PLN');
 
   const calculateInvest = () => {
     if (principal <= 0 || rate <= 0) {
@@ -59,14 +61,22 @@ const CountInvest: React.FC<CountInvestProps> = ({
           Calculate for Investment Fund
         </button>
       </div>
+      <CurrencySelector
+        selectedCurrency={selectedCurrency}
+        onCurrencyChange={setSelectedCurrency}
+      />
       <div className={styles.result_info}>
         <p className={styles.amount_text__invest}>
           Interest amount*:
-          <span className={styles.total_interest__invest}>{interest}</span> PLN
+          <span className={styles.total_interest__invest}>{interest}</span>{' '}
+          {selectedCurrency}
         </p>
         <p className={styles.amount_text__invest}>
           Total amount:
-          <span className={styles.total_amount__invest}>{totalAmount}</span> PLN
+          <span className={styles.total_amount__invest}>
+            {totalAmount}
+          </span>{' '}
+          {selectedCurrency}
         </p>
       </div>
     </div>
