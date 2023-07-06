@@ -4,8 +4,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root {
+--whitemilk: hsl(197, 50%, 93%);
+--darkblue: hsl(197, 70%, 12%);
+--mediumblue: hsl(197, 49%, 20%);
+--bgblue:hsl(197, 49%, 40%);
+--lightblue: hsl(197, 49%, 60%);
+--lightgrey: hsl(0, 0%, 56%);
+--errorred: hsl(0, 79%, 58%);
+}
 body {
-    background-color: #347B98;
+    background-color: var(--bgblue);
 }
 html {
     font-size: 100%;

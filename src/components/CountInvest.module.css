@@ -1,9 +1,9 @@
 .investment_container {
     margin-top: 20px;
-    background-color: #1a3e4c;
+    background-color: var(--mediumblue);
     border-radius: 7px;
     padding: 22px;
-    color: #e4f1f6;
+    color: var(--whitemilk);
     font-size: 1rem;
     box-shadow: 11px 2px 21px -7px rgba(13,35,43,1);
   }
@@ -17,30 +17,30 @@
   }
   .calculate_btn__invest {
     padding: 15px 10px;
-    border: 1.5px solid #e4f1f6;
-    color: #e4f1f6;
+    border: 1.5px solid var(--whitemilk);
+    color: var(--whitemilk);
     width: 100%;
     font-size: .9rem;
     font-weight: bold;
     border-radius: 4px;
     background-color: transparent;
-    color: #e4f1f6;
+    color: var(--whitemilk);
     cursor: pointer;
     transition: 0.3s all linear;
   }
   .calculate_btn__invest:hover {
-    color: #092834;
-    background: #e4f1f6;
+    color: var(--darkblue);
+    background: var(--whitemilk);
   }
   .amount_text__invest {
     font-size: 1rem;
-    color: #8f8f8f;
+    color: var(--lightgrey);
   }
   .active {
-    color: #e4f1f6;
+    color: var(--whitemilk);
   }
   .amount_text__invest span {
-    color: #e4f1f6;
+    color: var(--whitemilk);
     font-weight: 700;
     font-size: 1.1rem;
   }

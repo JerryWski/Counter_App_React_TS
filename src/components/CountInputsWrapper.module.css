@@ -1,9 +1,9 @@
 .inputs_wrapper {
   margin-top: 10px;
-  background-color: #1a3e4c;
+  background-color: var(--mediumblue);
   border-radius: 7px;
   padding: 22px;
-  color: #e4f1f6;
+  color: var(--whitemilk);
   box-shadow: 11px 2px 21px -7px rgba(13,35,43,1);
 }
 .input_container {
@@ -19,7 +19,7 @@
   outline: none;
   box-shadow: none;
   border: none;
-  color: #092834;
+  color: var(--darkblue);
   font-size: 1rem;
   letter-spacing: 0.05em;
   transition: 0.5s;
@@ -29,14 +29,14 @@
   position: absolute;
   right: 0;
   font-size: 1.1em;
-  color: #8f8f8f;
+  color: var(--lightgrey);
   letter-spacing: 00.05em;
   transition: 0.5s;
   pointer-events: none;
 }
 .input_container input:valid ~ span,
 .input_container input:focus ~ span {
-  color: #e4f1f6;
+  color: var(--whitemilk);
   transform: translateX(0px) translateY(-34px);
 }
 .input_container i {
@@ -46,7 +46,7 @@
   width: 100%;
   height: 2px;
   font-weight: bold;
-  background: #e4f1f6;
+  background: var(--whitemilk);
   border-radius: 4px;
   transition: 0.5s;
   pointer-events: none;
@@ -68,10 +68,10 @@
 .duration_explain {
   margin-top: 15px;
   text-align: left;
-  color: #67afcb;
+  color: var(--lightblue);
   font-size: 0.6rem;
 }
 .error_text,
 .error_text__amount {
-  color: #e94141;
+  color: var(--errorred);
 }

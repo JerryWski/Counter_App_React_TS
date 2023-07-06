@@ -1,9 +1,9 @@
 .deposit_container {
   margin-top: 20px;
-  background-color: #1a3e4c;
+  background-color: var(--mediumblue);
   border-radius: 7px;
   padding: 22px;
-  color: #e4f1f6;
+  color: var(--whitemilk);
   font-size: 1rem;
   box-shadow: 11px 2px 21px -7px rgba(13,35,43,1);
 }
@@ -15,18 +15,10 @@
 .button_wrapper {
   margin: 40px 10px 10px 10px;
 }
-/* .currency_container {
-  margin-bottom: 20px;
-  background: transparent;
-  border: 1px solid #e4f1f6;
-  border-radius: 7px;
-  padding: 4px;
-  color: #67AFCB;
-} */
 .calculate_btn__depo {
   padding: 15px 20px;
-  border: 1.5px solid #e4f1f6;
-  color: #e4f1f6;
+  border: 1.5px solid var(--whitemilk);
+  color: var(--whitemilk);
   width: 100%;
   font-size: .9rem;
   font-weight: bold;
@@ -36,18 +28,18 @@
   transition: 0.3s all linear;
 }
 .calculate_btn__depo:hover {
-  color: #092834;
-  background: #e4f1f6;
+  color: var(--darkblue);
+  background: var(--whitemilk);
 }
 .amount_text__depo {
   font-size: 1rem;
-  color: #8f8f8f;
+  color: var(--lightgrey);
 }
 .active {
-  color: #e4f1f6;
+  color: var(--whitemilk);
 }
 .amount_text__depo span {
-  color: #e4f1f6;
+  color: var(--whitemilk);
   font-weight: 700;
   font-size: 1.1rem;
 }
