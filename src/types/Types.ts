@@ -1,14 +1,14 @@
 export type InputCalcProps = {
-  principal: number;
-  rate: number;
-  month: number;
-  onPrincipalChange: (value: number) => void;
-  onRateChange: (value: number) => void;
-  onMonthChange: (value: number) => void;
+  principal: number | string;
+  rate: number | string;
+  month: number | string;
+  onPrincipalChange: (value: number | string) => void;
+  onRateChange: (value: number | string) => void;
+  onMonthChange: (value: number | string) => void;
 };
 
 export type CalcProps = {
-  principal: number;
-  rate: number;
-  month: number;
+  principal: number | string;
+  rate: number | string;
+  month: number | string;
 };

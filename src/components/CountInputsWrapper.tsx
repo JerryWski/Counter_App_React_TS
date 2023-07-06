@@ -23,7 +23,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
     onPrincipalChange(principalValue);
     // check for fixing console error with input value
     if (Number.isNaN(principalValue)) {
-      onPrincipalChange(0);
+      onPrincipalChange('');
     } else {
       onPrincipalChange(principalValue);
     }
@@ -33,7 +33,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
     const rateValue = parseFloat(e.target.value);
     onRateChange(rateValue);
     if (Number.isNaN(rateValue)) {
-      onRateChange(0);
+      onRateChange('');
     } else {
       onRateChange(rateValue);
     }
@@ -43,7 +43,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
     const monthValue = parseFloat(e.target.value);
     onMonthChange(monthValue);
     if (Number.isNaN(monthValue)) {
-      onMonthChange(0);
+      onMonthChange('');
     } else {
       onMonthChange(monthValue);
     }
@@ -57,7 +57,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
       <div className={styles.input_container}>
         <input
           required
-          type="number"
+          // type="number"
           value={principal}
           onChange={handlePrincipalChange}
         />
@@ -67,7 +67,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
       <div className={styles.input_container}>
         <input
           required
-          type="number"
+          // type="number"
           onChange={handleRateChange}
           value={rate}
         />
@@ -77,7 +77,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
       <div className={styles.input_container}>
         <input
           required
-          type="number"
+          // type="number"
           onChange={handleMonthChange}
           value={month}
         />

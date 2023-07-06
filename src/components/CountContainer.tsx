@@ -5,9 +5,9 @@ import CountInputsWrapper from './CountInputsWrapper';
 import CountInvest from './CountInvest';
 
 const CountContainer = () => {
-  const [principal, setPrincipal] = useState<number>(0);
-  const [rate, setRate] = useState<number>(0);
-  const [month, setMonth] = useState<number>(0);
+  const [principal, setPrincipal] = useState<number | string>('');
+  const [rate, setRate] = useState<number | string>('');
+  const [month, setMonth] = useState<number | string>('');
   const [errorText, setErrorText] = useState<string>('');
   const [errorDuration, setErrorDuration] = useState<string>('');
 

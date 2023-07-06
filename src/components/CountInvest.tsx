@@ -21,18 +21,18 @@ const CountInvest: React.FC<CountInvestProps> = ({
   const [selectedCurrency, setSelectedCurrency] = useState('PLN');
 
   const calculateInvest = () => {
-    if (principal <= 0 || rate <= 0) {
+    if (Number(principal) <= 0 || Number(rate) <= 0) {
       setErrorText('Please enter a number greater than 0');
       return;
     }
-    if (month < 1 || month > 12) {
+    if (Number(month) < 1 || Number(month) > 12) {
       setErrorDuration('Please enter a number from 1 to 12');
       return;
     }
 
-    const calculatedInterest = principal * (rate / 100) * 0.81;
+    const calculatedInterest = Number(principal) * (Number(rate) / 100) * 0.81;
     const calculatedTotalAmount =
-      principal + parseFloat(calculatedInterest.toFixed(2));
+      Number(principal) + parseFloat(calculatedInterest.toFixed(2));
 
     setInterest(calculatedInterest.toFixed(2));
     setTotalAmount(calculatedTotalAmount.toFixed(2));
