@@ -1,6 +1,6 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import styles from './CountDeposit.module.css';
-import DepositInvestProps from '../types/DepositInvestProps';
 import { CalcProps } from '../types/Types';
 import CurrencySelector from './CurrencySelector';
 
@@ -8,7 +8,6 @@ interface CountDepositProps extends CalcProps {
   setErrorText: (errorText: string) => void;
   setErrorDuration: (errorDuration: string) => void;
 }
-// passing setErrorText prop to component with func
 const CountDeposit: React.FC<CountDepositProps> = ({
   principal,
   rate,
@@ -83,5 +82,4 @@ const CountDeposit: React.FC<CountDepositProps> = ({
     </div>
   );
 };
-CountDeposit.propTypes = DepositInvestProps;
 export default CountDeposit;

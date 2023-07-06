@@ -1,7 +1,8 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import styles from './CountInvest.module.css';
 import { CalcProps } from '../types/Types';
-import DepositInvestProps from '../types/DepositInvestProps';
+// import DepositInvestProps from '../types/DepositInvestProps';
 import CurrencySelector from './CurrencySelector';
 
 interface CountInvestProps extends CalcProps {
@@ -82,5 +83,5 @@ const CountInvest: React.FC<CountInvestProps> = ({
     </div>
   );
 };
-CountInvest.propTypes = DepositInvestProps;
+// CountInvest.propTypes = DepositInvestProps;
 export default CountInvest;
