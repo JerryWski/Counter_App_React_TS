@@ -75,3 +75,9 @@
 .error_text__amount {
   color: var(--errorred);
 }
+
+@media (min-width: 900px) {
+  .duration_explain {
+    font-size: .8rem;
+  }
+}

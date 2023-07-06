@@ -39,13 +39,17 @@
   }
   .header_text {
     width: auto;
-    font-size: 4rem;
+    font-size: 5rem;
     text-align: center;
     margin: 35px;
     background-color: var(--whitemilk);
     border-radius: 7px;
   }
   .subheader_text {
-    font-size: 2rem;
+    font-size: 2.3rem;
+  }
+  .text {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
   }
 }
