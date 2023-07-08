@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+:root {
   --whitemilk: hsl(197, 50%, 93%);
   --darkblue: hsl(197, 70%, 12%);
   --errorred: hsl(0, 79%, 58%);
@@ -17,7 +17,7 @@ body {
   --boxshadow: 11px 2px 21px -7px rgb(165, 169, 170);
   --text-two: hsl(197, 49%, 20%);
 }
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   body {
     --text-two: hsl(197, 50%, 93%);
     --boxshadow: 11px 2px 21px -7px rgba(13,35,43,1);
@@ -32,10 +32,21 @@ body {
     --darkblue: hsl(197, 70%, 12%);
     --errorred: hsl(0, 79%, 58%);
   }
-}
-/* body {
-    background-color: var(--bgblue);
 } */
+[data-theme='dark'] {
+  --text-two: hsl(197, 50%, 93%);
+  --boxshadow: 11px 2px 21px -7px rgba(13, 35, 43, 1);
+  --textspan: hsl(0, 3%, 77%);
+  --bgblue-three: hsl(197, 49%, 20%);
+  --footcolor: hsl(197, 49%, 60%);
+  --bgblue-two: hsl(197, 70%, 12%);
+  --bgcolor: hsl(197, 49%, 40%);
+  --subtext: hsl(197, 50%, 93%);
+  --text: hsl(197, 49%, 60%);
+  --whitemilk: hsl(197, 50%, 93%);
+  --darkblue: hsl(197, 70%, 12%);
+  --errorred: hsl(0, 79%, 58%);
+}
 html {
   font-size: 100%;
 }
