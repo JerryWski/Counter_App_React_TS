@@ -1,11 +1,11 @@
 .deposit_container {
   margin-top: 20px;
-  background-color: var(--mediumblue);
+  background-color: var(--bgblue-three);
   border-radius: 7px;
   padding: 22px;
-  color: var(--whitemilk);
+  color: var(--subtext);
   font-size: 1rem;
-  box-shadow: 11px 2px 21px -7px rgba(13,35,43,1);
+  box-shadow: var(--boxshadow);
 }
 .deposit_subheader {
   font-size: 1.25rem;
@@ -18,7 +18,7 @@
 .calculate_btn__depo {
   padding: 15px 20px;
   border: 1.5px solid var(--whitemilk);
-  color: var(--whitemilk);
+  color: var(--subtext);
   width: 100%;
   font-size: .9rem;
   font-weight: bold;
@@ -28,18 +28,18 @@
   transition: 0.3s all linear;
 }
 .calculate_btn__depo:hover {
-  color: var(--darkblue);
+  color: hsl(197, 49%, 20%);
   background: var(--whitemilk);
 }
 .amount_text__depo {
   font-size: 1rem;
-  color: var(--lightgrey);
+  color: var(--textspan);
 }
-.active {
+/* .active {
   color: var(--whitemilk);
-}
+} */
 .amount_text__depo span {
-  color: var(--whitemilk);
+  color: var(--text-two);
   font-weight: 700;
   font-size: 1.1rem;
 }

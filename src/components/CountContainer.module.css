@@ -1,5 +1,5 @@
 .bg_wrapper {
-  background-color: var(--darkblue);
+  background-color: var(--bgblue-two);
   padding: 16px;
   display: flex;
   flex-direction: row;
@@ -13,9 +13,8 @@
   margin: 20px;
 }
 .count_header {
-  color: var(--whitemilk);
+  color: var(--subtext);
   font-size: 2.1rem;
-  padding: 5px;
   margin-top: 40px;
   margin-bottom: 40px;
   letter-spacing: 6px;
@@ -26,7 +25,7 @@
 }
 .footer {
   margin-top: 15px;
-  color: var(--lightblue);
+  color: var(--footcolor);
 }
 @media (min-width: 900px) {
   .bg_wrapper {
@@ -35,7 +34,7 @@
     align-items: center;
   }
   .count_header {
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin-top: 10px;
     margin-bottom: 40px;
   }

@@ -10,14 +10,14 @@
   text-align: center;
   background-color: var(--whitemilk);
   border-radius: 7px;
-  width: 100%;
-  margin: 30px 0 60px 0;
-  padding: 25px 65px;
+  width: 90%;
+  margin: 30px 0 30px 0;
+  padding: 25px 15px;
   color: var(--darkblue);
-  font-size: 1.6rem;
+  font-size: 1.3rem;
 }
 .subheader_text {
-  color: var(--whitemilk);
+  color: var(--subtext);
   padding: 10px 15px;
   margin: 0 auto;
   width: 100%;
@@ -26,8 +26,8 @@
 }
 .text {
   margin: 0 auto;
-  padding: 15px;
-  color: var(--lightblue);
+  padding: 10px 15px;
+  color: var(--text);
   font-size: 0.8rem;
   line-height: 25px;
   text-align: left;
@@ -47,8 +47,10 @@
   }
   .subheader_text {
     font-size: 2.3rem;
+    color: var(--subtext);
   }
   .text {
+    color: var(--text);
     font-size: 1.2rem;
     line-height: 1.8rem;
   }
