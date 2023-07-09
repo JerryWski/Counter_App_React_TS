@@ -1,4 +1,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import Sun from '../../assets/Sun.svg';
+import Moon from '../../assets/Moon.svg';
+
 import './DarkMode.css';
 
 const DarkMode = () => {
@@ -20,7 +23,10 @@ const DarkMode = () => {
         id="darkmode-toggle"
         onChange={toggleTheme}
       />
-      <label className="dark_mode_label" htmlFor="darkmode-toggle" />
+      <label className="dark_mode_label" htmlFor="darkmode-toggle">
+        <Sun />
+        <Moon />
+      </label>
     </div>
   );
 };
