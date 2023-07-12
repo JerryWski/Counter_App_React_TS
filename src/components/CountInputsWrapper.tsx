@@ -57,7 +57,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
       <div className={styles.input_container}>
         <input
           required
-          // type="number"
+          type="number"
           value={principal}
           onChange={handlePrincipalChange}
         />
@@ -67,7 +67,7 @@ const CountInputsWrapper: React.FC<CountInputsWrapperProps> = ({
       <div className={styles.input_container}>
         <input
           required
-          // type="number"
+          type="number"
           onChange={handleRateChange}
           value={rate}
         />
