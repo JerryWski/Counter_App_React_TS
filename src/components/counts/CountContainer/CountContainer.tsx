@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import styles from './CountContainer.module.css';
-import CountDeposit from './CountDeposit';
-import CountInputsWrapper from './CountInputsWrapper';
-import CountInvest from './CountInvest';
+import CountDeposit from '../../CountDeposit';
+import CountInputsWrapper from '../../CountInputsWrapper';
+import CountInvest from '../../CountInvest';
 
 const CountContainer = () => {
   const [principal, setPrincipal] = useState<number | string>('');

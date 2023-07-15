@@ -1,6 +1,6 @@
 import styles from './App.module.css';
 import Header from './components/Header';
-import CountContainer from './components/CountContainer';
+import { CountContainer } from './components/counts/CountContainer';
 import DarkMode from './components/shared/DarkMode';
 
 const App: React.FC = () => {
