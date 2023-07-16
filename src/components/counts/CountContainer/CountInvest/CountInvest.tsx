@@ -1,14 +1,15 @@
 /* eslint-disable react/prop-types */
 import { useState } from 'react';
-import styles from './CountDeposit.module.css';
-import { CalcProps } from '../types/Types';
-import CurrencySelector from './CurrencySelector';
+import styles from './CountInvest.module.css';
+import { CalcProps } from '../../../../types/Types';
+import { CurrencySelector } from '../CurrencySelector';
 
-interface CountDepositProps extends CalcProps {
+interface CountInvestProps extends CalcProps {
   setErrorText: (errorText: string) => void;
-  setErrorDuration: (errorDuration: string) => void;
+  setErrorDuration: (errorText: string) => void;
 }
-const CountDeposit: React.FC<CountDepositProps> = ({
+
+const CountInvest: React.FC<CountInvestProps> = ({
   principal,
   rate,
   month,
@@ -19,8 +20,7 @@ const CountDeposit: React.FC<CountDepositProps> = ({
   const [totalAmount, setTotalAmount] = useState('');
   const [selectedCurrency, setSelectedCurrency] = useState('PLN');
 
-  // setting up condition for display text
-  const calculateDeposit = () => {
+  const calculateInvest = () => {
     if (Number(principal) <= 0 || Number(rate) <= 0) {
       setErrorText('Please enter a number greater than 0');
       return;
@@ -30,8 +30,7 @@ const CountDeposit: React.FC<CountDepositProps> = ({
       return;
     }
 
-    const calculatedInterest =
-      Number(principal) * (Number(rate) / 100) * 0.81 * (Number(month) / 12);
+    const calculatedInterest = Number(principal) * (Number(rate) / 100) * 0.81;
     const calculatedTotalAmount =
       Number(principal) + parseFloat(calculatedInterest.toFixed(2));
 
@@ -49,18 +48,17 @@ const CountDeposit: React.FC<CountDepositProps> = ({
       errorDuration.textContent = '';
     }
   };
-
   return (
-    <div className={styles.deposit_container}>
-      <h2 className={styles.deposit_subheader}>Check for Bank Deposit</h2>
+    <div className={styles.investment_container}>
+      <h2 className={styles.investment_subheader}>Check for Investment Fund</h2>
       <div className={styles.button_wrapper}>
         <button
-          className={styles.calculate_btn__depo}
+          className={styles.calculate_btn__invest}
           id="buttons"
           type="button"
-          onClick={calculateDeposit}
+          onClick={calculateInvest}
         >
-          Calculate for deposit
+          Calculate for Investment Fund
         </button>
       </div>
       <CurrencySelector
@@ -68,18 +66,21 @@ const CountDeposit: React.FC<CountDepositProps> = ({
         onCurrencyChange={setSelectedCurrency}
       />
       <div className={styles.result_info}>
-        <p className={styles.amount_text__depo}>
+        <p className={styles.amount_text__invest}>
           Interest amount*:
-          <span className={styles.total_interest__depo}>{interest}</span>{' '}
+          <span className={styles.total_interest__invest}>{interest}</span>{' '}
           {selectedCurrency}
         </p>
-        <p className={styles.amount_text__depo}>
+        <p className={styles.amount_text__invest}>
           Total amount:
-          <span className={styles.total_amount__depo}>{totalAmount}</span>{' '}
+          <span className={styles.total_amount__invest}>
+            {totalAmount}
+          </span>{' '}
           {selectedCurrency}
         </p>
       </div>
     </div>
   );
 };
-export default CountDeposit;
+// CountInvest.propTypes = DepositInvestProps;
+export default CountInvest;

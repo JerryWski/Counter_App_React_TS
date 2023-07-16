@@ -1,6 +1,6 @@
 import styles from './CurrencySelector.module.css';
 // eslint-disable-next-line import/no-named-as-default
-import CurrencyTypes from '../types/CurrencyTypes';
+import CurrencyTypes from '../../../../types/CurrencyTypes';
 
 interface CurrencySelectorProps {
   selectedCurrency: string;

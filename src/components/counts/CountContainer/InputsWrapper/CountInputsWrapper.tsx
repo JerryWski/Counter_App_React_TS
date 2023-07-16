@@ -1,7 +1,7 @@
 /* eslint-disable react/self-closing-comp */
 import styles from './CountInputsWrapper.module.css';
-import InputsPropTypes from '../types/PropTypes';
-import { InputCalcProps } from '../types/Types';
+import InputsPropTypes from '../../../../types/PropTypes';
+import { InputCalcProps } from '../../../../types/Types';
 
 interface CountInputsWrapperProps extends InputCalcProps {
   errorText: string;

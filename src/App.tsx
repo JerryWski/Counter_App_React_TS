@@ -1,5 +1,5 @@
 import styles from './App.module.css';
-import Header from './components/Header';
+import { Header } from './components/header/HeaderContainer';
 import { CountContainer } from './components/counts/CountContainer';
 import DarkMode from './components/shared/DarkMode';
 
